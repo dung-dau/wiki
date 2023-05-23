@@ -1,0 +1,27 @@
+<div class="flex flex-columns align-items-center justify-content-center mt-4">
+    <div class="w-50">
+        <h1 class="title">Add a page</h1>
+        <form [formGroup]="newPageForm" (ngSubmit)="onSubmit()">
+            <div class="field">
+                <label class="label" for="title">Title: </label>
+                <div class="control">
+                    <input class="input" id="title" type="text" formControlName="title" placeholder="Title">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="imageUrl">Image URL: </label>
+                <div class="control">
+                    <input class="input" id="imageUrl" type="text" formControlName="imageUrl">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="content">Content: </label>
+                <div class="control">
+                    <input class="input" id="content" type="text" formControlName="content">
+                </div>
+            </div>
+            <button class="button is-link" type="submit" onsubmit="onSubmit()">Add page</button>
+        </form>
+    </div>
+</div>
+
