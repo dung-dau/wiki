@@ -24,10 +24,6 @@ export class DeletepageComponent {
 
   onSubmit() {
     console.log('Deleting page...');
-    // this.newPageTitle = this.deletePageForm.value.title;
-    // this.newPageContent = this.deletePageForm.value.content;
-    // this.newPage = new Page(this.newPageTitle!, this.newPageImageUrl!, this.newPageContent!);
-    // console.log(JSON.stringify(this.newPage));
     this.retrievingPageId = this.deletePageForm.value.id;
     if(this.retrievingPageId) {
       this.pageService.deletePage(this.retrievingPageId).subscribe();
