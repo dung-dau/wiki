@@ -1,8 +1,12 @@
-<h1 class="title">Delete a page</h1>
-<form [formGroup]="deletePageForm" (ngSubmit)="onSubmit()">
-    <div class="flex flex-columns w-50 mb-3">
-        <label for="id">Id: </label>
-        <input id="id" type="text" formControlName="id">
-    </div>
-    <button type="submit" onsubmit="onSubmit()">Delete page</button>
-</form>
+<div class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center mt-4">
+    <h1 class="title">Delete a page</h1>
+    <form [formGroup]="deletePageForm" (ngSubmit)="onSubmit()">
+        <div class="field">
+            <label class="label" for="id">Id: </label>
+            <div class="control">
+                <input class="input" id="id" type="text" formControlName="id" placeholder="Id">
+            </div>
+        </div>
+        <button class="button is-link" type="submit" onsubmit="onSubmit()">Delete page</button>
+    </form>
+</div>
