@@ -24,11 +24,9 @@ export class AddpageComponent {
 
 
   onSubmit() {
-    console.log('Entering data');
     this.newPageTitle = this.newPageForm.value.title;
     this.newPageContent = this.newPageForm.value.content;
     this.newPage = new Page(this.newPageTitle!, this.newPageContent!);
-    console.log(JSON.stringify(this.newPage));
     this.pageService.createPage(this.newPage).subscribe(
       {
         next: (v: Page) => console.log(v),

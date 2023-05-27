@@ -23,7 +23,6 @@ export class DeletepageComponent {
 
 
   onSubmit() {
-    console.log('Deleting page...');
     this.retrievingPageId = this.deletePageForm.value.id;
     if(this.retrievingPageId) {
       this.pageService.deletePage(this.retrievingPageId).subscribe();
