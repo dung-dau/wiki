@@ -15,11 +15,9 @@ export class AddpageComponent {
 
   newPageForm = new FormGroup({
     title: new FormControl(''),
-    imageUrl: new FormControl(''),
     content: new FormControl(''),
   });
   newPageTitle: string | null | undefined;
-  newPageImageUrl: string | null | undefined;
   newPageContent: string | null | undefined;
   newPage: Page | null = null;
   jsonString: string = "";
@@ -28,9 +26,8 @@ export class AddpageComponent {
   onSubmit() {
     console.log('Entering data');
     this.newPageTitle = this.newPageForm.value.title;
-    this.newPageImageUrl = this.newPageForm.value.imageUrl;
     this.newPageContent = this.newPageForm.value.content;
-    this.newPage = new Page(this.newPageTitle!, this.newPageImageUrl!, this.newPageContent!);
+    this.newPage = new Page(this.newPageTitle!, this.newPageContent!);
     console.log(JSON.stringify(this.newPage));
     this.pageService.createPage(this.newPage).subscribe(
       {

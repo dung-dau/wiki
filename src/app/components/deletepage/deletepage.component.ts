@@ -16,7 +16,6 @@ export class DeletepageComponent {
     id: new FormControl(''),
   });
   newPageTitle: string | null | undefined;
-  newPageImageUrl: string | null | undefined;
   newPageContent: string | null | undefined;
   newPage: Page | null = null;
   jsonString: string = "";
@@ -26,7 +25,6 @@ export class DeletepageComponent {
   onSubmit() {
     console.log('Deleting page...');
     // this.newPageTitle = this.deletePageForm.value.title;
-    // this.newPageImageUrl = this.deletePageForm.value.imageUrl;
     // this.newPageContent = this.deletePageForm.value.content;
     // this.newPage = new Page(this.newPageTitle!, this.newPageImageUrl!, this.newPageContent!);
     // console.log(JSON.stringify(this.newPage));
