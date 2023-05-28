@@ -1,14 +1,17 @@
 <nav class="navbar is-info" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item" routerLink="">
-        <img src="https://bulma.io/assets/Bulma%20Logo%20White.png" width="112" height="28">
-      </a>
+      <a class="navbar-item navbar-logo" routerLink=""></a>
       <div>
-        <span #burger class="navbar-burger" data-target="navMenu" (click)="showContents()">
-          <span></span>
-          <span></span>
-          <span></span>
+        <span #burger class="navbar-burger is-flex is-align-items-center is-justify-content-center" (click)="showContents()" aria-label="menu" aria-expanded="false">
+          <div *ngIf="showMobileContents; else elseBlock">
+            <fa-icon [icon]="faX"></fa-icon>
+          </div>
+          <ng-template #elseBlock role="button" class="navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </ng-template>
         </span>
       </div>
     </div>
@@ -30,18 +33,6 @@
         >
           Delete Page
         </a>
-      </div>
-      <div class="navbar-end">
-        <div class="navbar-item is-flex is-justify-content-space-between">
-          <div class="buttons">
-            <a class="button is-link">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light">
-              Log in
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   </div>

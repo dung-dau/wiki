@@ -1,3 +1,10 @@
 .navbar-brand {
     justify-content: space-between;
+    padding-left: 0.75rem;
 }
+
+.navbar-logo {
+    background: url(../../../assets/wiki-logo.png) no-repeat center center;
+    background-size: cover;
+    width: 6.25rem;
+  }

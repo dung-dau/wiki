@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, ViewChild } from '@angular/core';
 import { Page } from 'src/app/model/page.model';
 import { PageService } from 'src/app/services/page.service';
+import { faX, faCube } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +10,8 @@ import { PageService } from 'src/app/services/page.service';
 })
 export class NavbarComponent {
   @ViewChild('burger') span: any;
-
+  faX = faX;
+  faCube = faCube;
   pages: Page[] = [];
   showMobileContents: Boolean = true;
 
