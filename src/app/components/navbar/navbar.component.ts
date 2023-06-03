@@ -1,7 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Page } from 'src/app/model/page.model';
-import { PageService } from 'src/app/services/page.service';
-import { faX, faCube } from '@fortawesome/free-solid-svg-icons';
+import { faX, faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -11,26 +9,11 @@ import { faX, faCube } from '@fortawesome/free-solid-svg-icons';
 export class NavbarComponent {
   @ViewChild('burger') span: any;
   faX = faX;
-  faCube = faCube;
-  pages: Page[] = [];
-  showMobileContents: Boolean = true;
+  faBars = faBars;
+  mobileMenuActive: boolean = false;
+  logoPath: string = 'assets/wiki-logo.png';
 
-  constructor(private pageService: PageService) {}
-
-  ngOnInit(): void {
-    this.pageService.getAllPages().subscribe(
-      {
-        next: (v: Page) => this.pages.push(v),
-        error: (e: Error) => console.error(e),
-        complete: () => console.info('complete') 
-      }
-    )
-    console.log(this.pages);
+  toggleMobileMenu() {
+    this.mobileMenuActive = !this.mobileMenuActive;
   }
-
-  showContents(): void {
-    this.showMobileContents = !this.showMobileContents;
-    console.log(this.showMobileContents)
-  }
-
 }
