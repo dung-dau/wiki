@@ -1,11 +1,15 @@
 <nav class="navbar is-info" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item logo-link" routerLink=""></a>
-    <div class="navbar-end">
-      <a class="navbar-burger burger " (click)="toggleMobileMenu()" role="button" aria-label="menu" aria-expanded="false">
+    <div class="is-flex is-align-items-center mr-3">
+      <a 
+        class="navbar-burger burger " 
+        (click)="toggleMobileMenu()" 
+        role="button" aria-label="menu" 
+        aria-expanded="false"
+      >
         <span class="hamburger-icon" [ngClass]="{'is-active': mobileMenuActive}">
-          <fa-icon [icon]="faX" *ngIf="mobileMenuActive"></fa-icon>
-          <fa-icon [icon]="faBars" *ngIf="!mobileMenuActive"></fa-icon>
+          <fa-icon [icon]="mobileMenuActive ? faX : faBars"></fa-icon>
         </span>
       </a>
     </div>

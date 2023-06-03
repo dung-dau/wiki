@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { faX, faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,11 +7,10 @@ import { faX, faBars } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  @ViewChild('burger') span: any;
   faX = faX;
   faBars = faBars;
-  mobileMenuActive: boolean = false;
-  logoPath: string = 'assets/wiki-logo.png';
+  mobileMenuActive = false;
+  logoPath = 'assets/wiki-logo.png';
 
   toggleMobileMenu() {
     this.mobileMenuActive = !this.mobileMenuActive;

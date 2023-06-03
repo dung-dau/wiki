@@ -1,28 +1,17 @@
 .hamburger-icon {
-    line-height: 0;
-    background-color: transparent;
+  line-height: 0;
+  background-color: transparent;
 }
 
 .logo-link {
-    width: 9.375rem;
-    height: 4.5rem;
-    background-image: url(/assets/wiki-logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  width: 9.375rem;
+  height: 4.5rem;
+  background-image: url(/assets/wiki-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .navbar-brand {
-    justify-content: space-between;
-}
-
-.navbar-end {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 0.75rem;
-}
-
-.navbar-end {
-    display: flex;
-    align-items: center;
+  justify-content: space-between;
 }
